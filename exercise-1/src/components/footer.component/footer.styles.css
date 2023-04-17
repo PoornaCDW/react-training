@@ -1,0 +1,82 @@
+footer {
+    background-color: #F7F7F7;
+}
+
+.contact-us {
+    gap: 30px;
+    margin: auto;
+    display: flex;
+    padding: 110px 0;
+    width: fit-content;
+    flex-direction: column;
+}
+
+.heading {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us h1 {
+    font-size: 50px;
+    color: #7A1655;
+    letter-spacing: 1px;
+}
+
+.contact-us h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #974A7A;
+}
+
+#contactForm {
+    gap: 30px;
+    width: 845px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-data {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-data label {
+    font-size: 25px;
+}
+
+.form-options {
+    padding: 30px;
+    font-size: 20px;
+    color: #8E8E8E;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat, repeat;
+    background-position: right 20px top 50%, 0 0;
+    background-size: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#contactForm input::-webkit-outer-spin-button, #contactForm input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#contactForm input {
+    padding: 28px;
+    font-size: 20px;
+}
+
+.contact-us button {
+    border: none;
+    color: #fff;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 16px 45px;
+    background-color: #7A1655;
+}
