@@ -12,7 +12,7 @@ const Footer = () => {
             <section className="contact-us">
                 <div className='heading'>
                     <h1>Contact Us</h1>
-                    <h2>Our Sales Team will reach out to you ASAP</h2>
+                    <h2>Our Sales Team will reach out to you ASAP!</h2>
                 </div>
                 <form id='contactForm'>
                     <div className='form-data'>
