@@ -1,6 +1,6 @@
 // import Places from '../../assets/data/places.json';
 import getData from '../../services/axiosApi';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 /**
@@ -13,13 +13,11 @@ import { useNavigate } from 'react-router-dom';
 const PlacesCards = () => {
     const navigate = useNavigate();
     const [Places, setPlaces] = useState([]);
-
-    useEffect(() => {
-        const callFetch = async () => {
-            setPlaces(await getData());
-        }
-        callFetch();
-    }, []);
+    
+    const callFetch = async () => {
+        setPlaces(await getData());
+    }
+    callFetch();
 
     return(
         Places.map((place, i) => {

@@ -1,5 +1,6 @@
 import './footer.styles.css';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * The above function returns a footer section with a contact form for users to submit their interest.
@@ -13,7 +14,7 @@ const Footer = () => {
     const [homeTown, setHometown] = useState("");
     const [interestedArea, setInterestedArea] = useState("");
     const [contactNumber, setContactNumber] = useState("");
-    const [isValid,setIsValid] = useState(false);
+    const [isValid, setIsValid] = useState(false);
     const [unchangedName, setUnchangedName] = useState("");
 
     const regex = {
@@ -77,7 +78,7 @@ const Footer = () => {
                 </form>
                 <button type='button' onClick={validateForm}>SUBMIT INTEREST</button>
             </section>
-            {isValid ? (<OutputMessage name={unchangedName} source={homeTown} destination={interestedArea} />):<div></div>}
+            {isValid ? (<OutputMessage name={unchangedName} source={homeTown} destination={interestedArea} />):(<></>)}
         </footer>
     );
 }
@@ -95,13 +96,25 @@ const Footer = () => {
  * the destination.
  */
 const OutputMessage = (props) => {
-    const {name, source, destination} = props;
-    
     return (
         <div className='output-message'>
-            <h1>Thank You <span>{name}</span> for expressing interest in travelling with us. Our Sales Team will get back with best packages from <span>{source}</span> to <span>{destination}</span>.</h1>
+            <h1>Thank You <span>{props.name}</span> for expressing interest in travelling with us. Our Sales Team will get back with best packages from <span>{props.source}</span> to <span>{props.destination}</span>.</h1>
         </div>
     );
 }
+
+OutputMessage.propTypes = {
+    name: PropTypes.string,
+    source: PropTypes.string,
+    destination: PropTypes.string
+}
+
+// const ValidationError = () => {
+//     return (
+//         <div className='output-message'>
+//             <h1>Enter proper details!</h1>
+//         </div>
+//     );
+// }
 
 export default Footer;

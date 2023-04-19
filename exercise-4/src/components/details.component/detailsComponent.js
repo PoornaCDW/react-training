@@ -37,7 +37,11 @@ const Details = () => {
                     </article>
                 </section>
                 <section className='description-container'>
-                    <p>{PlaceData.fullDescription}</p>
+                    {
+                        PlaceData.fullDescription.split('\\n').map((value, i) => {
+                            return <p key={i} style={{'marginBottom': '30px'}}>{value}</p>
+                        })
+                    }
                 </section>
             </>
         );

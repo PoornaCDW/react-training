@@ -1,6 +1,7 @@
 import { getSimilarDestinations, getSpecificData } from '../../services/axiosApi';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * This is a React component that fetches and displays similar destination cards based on the current
@@ -14,19 +15,15 @@ const SimilarCards = () => {
     const { cityName } = useParams();
     const [SimilarCities, setSimilarCities] = useState([]);
 
-    useEffect(() => {
-        const callFetch = async () => {
-            setSimilarCities(await getSimilarDestinations(cityName));
-        }
-        callFetch();
-    }, [cityName]);
+    const callFetch = async () => {
+        setSimilarCities(await getSimilarDestinations(cityName));
+    }
+    callFetch();
 
     return (
         SimilarCities.map((city, i) => {
             return (
-                <>
-                    <GetIndividualCards city={city.toLowerCase()}/>
-                </>
+                <GetIndividualCards city={city.toLowerCase()} key={i} />
             )
         })
     );
@@ -47,12 +44,12 @@ const GetIndividualCards = (props) => {
     const navigate = useNavigate();
     const [CityDetails, setCityDetails] = useState([]);
 
-    useEffect(() => {
+    // useEffect(() => {
         const callFetch = async () => {
             setCityDetails(await getSpecificData(props.city));
         }
         callFetch();
-    }, [props.city]);
+    // }, [props.city]);
 
     return (
         <div className='places-card'>
@@ -66,6 +63,10 @@ const GetIndividualCards = (props) => {
                 }}>READ MORE</button>
         </div>
     );
+}
+
+GetIndividualCards.proTypes = {
+    city: PropTypes.string
 }
 
 export default SimilarCards;

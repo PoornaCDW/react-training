@@ -72,6 +72,14 @@ footer {
     font-size: 20px;
 }
 
+#contactForm input:focus {
+    outline: none;
+}
+
+#contactForm select:focus {
+    outline: none;
+}
+
 .contact-us button {
     border: none;
     color: #fff;
