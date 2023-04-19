@@ -1,0 +1,63 @@
+.explorer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.explore {
+    width: 42.3%;
+    padding: 195px 70px 0 178px;
+}
+
+.explore h3 {
+    color: #9A4F7E;
+    font-size: 28px;
+}
+
+.explore h1 {
+    font-size: 90px;
+    font-weight: 300;
+    margin-top: 40px;
+    color: #7A1655;
+}
+
+.explore h1 span {
+    font-weight: 700;
+}
+
+.explorer-options {
+    margin-top: 120px;
+    position: relative;
+    padding: 30px;
+    width: 840px;
+    font-size: 20px;
+    color: #8E8E8E;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat, repeat;
+    background-position: right 20px top 50%, 0 0;
+    background-size: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.explore-button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 30px;
+    padding: 16px 45px;
+    background-color: #7A1655;
+}
+
+.explorer-image {
+    width: 57.7%;
+}
+
+.explorer-image img {
+    width: 100%;
+}

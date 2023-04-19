@@ -1,0 +1,68 @@
+.similar-destinations {
+    gap: 40px;
+    width: 86.6%;
+    display: flex;
+    margin: 0 auto 10vh;
+    flex-direction: column;
+}
+
+.similar-container-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.similar-container-heading h1 {
+    font-size: 55px;
+    color: #7A1655;
+    font-weight: 500;
+}
+
+.similar-container-heading h2 {
+    color: #984B7B;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.similar-cards-container {
+    gap: 35px;
+    display: flex;
+}
+
+.places-card {
+    gap: 20px;
+    width: 570px;
+    display: flex;
+    flex-direction: column;
+}
+
+.places-card img {
+    width: 100%;
+}
+
+.places-card h2 {
+    font-size: 40px;
+    color: #111111;
+    font-weight: 300;
+}
+
+.places-card h3 {
+    font-size: 20px;
+    color: #111111;
+}
+
+.places-card p {
+    height: 28vh;
+    color: #2A2A2A;
+    font-size: 22px;
+}
+
+.places-card button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    width: max-content;
+    padding: 16px 25px;
+    background-color: #7A1655;
+}

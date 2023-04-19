@@ -1,0 +1,53 @@
+.details-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    gap: 20px;
+    width: 41.5%;
+    display: flex;
+    flex-direction: column;
+    padding: 200px 70px 0 130px;
+}
+
+.details h1 {
+    font-size: 90px;
+    font-weight: 400;
+    color: #7A1655;
+}
+
+.data-bar {
+    background-color: #7A1655;
+    padding: 100px 90px;
+    position: relative;
+    line-height: 1.5;
+    font-size: 45px;
+    width: 1000px;
+    color: #fff;
+    z-index: 100;
+}
+
+.details h3 {
+    font-size: 70px;
+    font-weight: 400;
+}
+
+.image-container {
+    width: 58.5%;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.description-container {
+    padding: 130px;
+}
+
+.description-container p {
+    font-size: 35px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-align: justify;
+}
